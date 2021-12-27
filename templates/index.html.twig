@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Acceuil
+{% endblock %}
+{% block body %}
+	<section class="articles">
+		<article>
+			<h2>Titre de l'article</h2>
+			<div class="content">
+				<img src="http://placehold.it/350x150" alt="">
+				<a href="{{path('produit_show')}}" class="btn btn primary">Voir le Produit</a>
+			</div>
+		</article>
+		<article>
+			<h2>Titre de l'article</h2>
+			<div class="content">
+				<img src="http://placehold.it/350x150" alt="">
+				<a href="{{path('produit_show')}}" class="btn btn primary">Voir le Produit</a>
+			</div>
+		</article>
+	</section>
+{% endblock %}
