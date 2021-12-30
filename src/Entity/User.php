@@ -46,11 +46,6 @@ class User
     private $password;
 
     /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $createdAt;
-
-    /**
      * @ORM\OneToMany(targetEntity=Article::class, mappedBy="author")
      */
     private $articles;
@@ -125,17 +120,6 @@ class User
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
 
     /**
      * @return Collection|Article[]
